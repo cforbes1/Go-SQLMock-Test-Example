@@ -17,7 +17,7 @@ We're now at the point where we want to write our own unit tests to test functio
 
 By now you should've written unit tests in Golang, especially for Redis in A3. __If you have not written Golang unit tests yet__, please read Dr. Stearns reading on <a href=https://drstearns.github.io/tutorials/testing/>Automated Testing in Go</a>.
 
-We will be mocking a SQL database using the <a href=https://github.com/DATA-DOG/go-sqlmock">SQLMock library</a>. You will also be given one of the test function `TestGetByID()` so you can test your `GetByID()` function and use this as a basis to write your other test functions! This README will contain a detailed explanation of what the code is doing. 
+We will be mocking a SQL database using the <a href=https://github.com/DATA-DOG/go-sqlmock>SQLMock library</a>. You will also be given one of the test function `TestGetByID()` so you can test your `GetByID()` function and use this as a basis to write your other test functions! This README will contain a detailed explanation of what the code is doing. 
   
 In essence, we will be giving our mock database basic information and set up __expectations__ to meet when testing our implementation.
   
