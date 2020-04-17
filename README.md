@@ -185,7 +185,7 @@ We set up two main expectaions:
 - `ExpectQuery(query).WithArgs(c.idToGet).WillReturnRows(row)` for successful queries
 - `ExpectQuery(query).WithArgs(c.idToGet).WillReturnError(ErrUserNotFound)` for unsuccessful queries
 
-If any of these are unmet (either by skipping over them or not matching them), then we technically can't pass our test as there are more things to test.
+If any of these are unmet (either by skipping over them or not matching them), then we technically can't pass our test as there are still expectations to be met.
 ```
 if err := mock.ExpectationsWereMet(); err != nil {
   t.Errorf("There were unfulfilled expectations: %s", err)
