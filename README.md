@@ -192,4 +192,4 @@ if err := mock.ExpectationsWereMet(); err != nil {
 }
 ```
 
-You can refer to the actual mysqlstore_test.go file for the complete code!
+You can refer to the actual `store_test.go` file for the complete code!
