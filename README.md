@@ -13,6 +13,7 @@ __-----OR-----__
 
 If you are using MongoDB, the test function WILL NOT WORK for you, but you can still use the file to write out your test functions. If you do so, name the file `mongodbstore_test.go`
 
+## Example/Tutorial
 We're now at the point where we want to write our own unit tests to test functionality of our web servers and databases. However, we don't want to keep making calls to our __actual__ database because it can be expensive to do so and we don't want to mess with the actual data. Refer to <a href=https://youtu.be/tu9tWF4N-9E>William's Mocking Rationale video</a> for a novel example of mocking and a deeper explanation on why we do this.
 
 By now you should've written unit tests in Golang, especially for Redis in A3. __If you have not written Golang unit tests yet__, please read Dr. Stearns reading on <a href=https://drstearns.github.io/tutorials/testing/>Automated Testing in Go</a>.
