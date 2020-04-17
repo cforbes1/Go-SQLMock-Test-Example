@@ -1,6 +1,3 @@
-# Go SQLMock Test Example
-An example/tutorial to write a sample SQLMock test in Golang for the class INFO 441: Server-side Development at the University of Washington Information School.
-
 ## Instructions 
 If you are using a SQL database of some sort, you can any of the following:
 - Copy the code for the provided test function and paste it in your own test file
