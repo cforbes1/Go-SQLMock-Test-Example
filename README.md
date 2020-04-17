@@ -36,10 +36,10 @@ func TestGetByID(t *testing.T) {
       initialize a mock DB
       create and add an EXPECTED ROW to the mock db
       if the case expects an error {
-        set up an EXPECTED QUERY an ensure that it returns an ERROR for an unsuccessful query
+        set up an EXPECTED QUERY and ensure that it returns an ERROR for an unsuccessful query
         test our GetByID() function to see that it returns an error 
       } else {
-        set up an EXPECTED QUERY an ensure that it returns the EXPECTED ROW for a successful query
+        set up an EXPECTED QUERY and ensure that it returns the EXPECTED ROW for a successful query
         test our GetByID() function to see that it returns the correct use  
       }
       make sure we met all expectations of the mock database
@@ -50,7 +50,7 @@ func TestGetByID(t *testing.T) {
 ``` 
 
 ### Create Test Cases
-We want to know what cases will be successful and which cases will not be. In this example, we will keep track of a successful ID query, an unsuccessful ID query, and a query with a large ID value.
+We want to know what cases will be successful and which cases will not be. In this example, we will test a successful ID query, an unsuccessful ID query, and a query with a large ID value. In each case, we will need the __name__ of the case (for easy identification), the __user__ we will insert and expect to receive from the mock database, the __ID__ we will be using for the query, and whether or not we __expect an error__.
 ```
 cases := []struct {
   name         string
@@ -96,7 +96,7 @@ cases := []struct {
 ```
 
 ### Initializing the Mock DB
-For each case, we will initialize a mock database using `sqlmock.New()`. This is similar to opening an actual database connection, but used for testing purposes only. Queries, insertion, updates, and deletion will work in the mock database just like an actual database. 
+For each case, we will initialize a mock database using `sqlmock.New()`. This is similar to opening an actual database connection, but used for testing purposes only. Queries, insertion, updates, and deletion will work just like an actual database. 
 ```
 db, mock, err := sqlmock.New()
 if err != nil {
@@ -109,7 +109,7 @@ mySQLStore := &SQLStore{db}
 ```
 
 ### Creating and Adding an Expected Row to the Mock Database
-Now, let's add a row to the mock database with the given expected user of each case. `NewRows()` takes in a string slice that contains the __column names__ of a given table. From there, you can use `AddRow()` to add the values of the cases' expected user. The number of values passed into `AddRow()` MUST MATCH the number of columns passed into `NewRows()` or else you will get a runtime error. We can save this in a `row` variable that we will use later.
+Now, let's add a row to the mock database with the given expected user of each case. `NewRows()` takes in a string slice that contains the __column names__ of a given table. From there, you can use `AddRow()` to add the values of the expected user. The number of values passed into `AddRow()` MUST MATCH the number of columns passed into `NewRows()` or else you will get a runtime error. We can save this in a `row` variable that we will use later.
 ```
 // Create an expected row to the mock DB
 row := mock.NewRows([]string{
