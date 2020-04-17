@@ -91,6 +91,10 @@ func TestGetByID(t *testing.T) {
 
 		// TODO: update to match the query used in your Store implementation
 		query := "select id,email,passHash,username,firstName,lastName,photoUrl from Users where id=?"
+		// TODO: If you use regular expression characters like * in SELECT * you might need to use
+		// regexp.QuoteMeta() to transform special characters into a literal string that the mock database
+		// can parse. If not delete, this comment.
+		// query := regexp.QuoteMeta("select * from Users where id=?")
 
 		if c.expectError {
 			// Set up expected query that will expect an error
