@@ -19,7 +19,7 @@ By now you should've written unit tests in Golang, especially for Redis in A3. _
 
 We will be mocking a SQL database using the <a href=https://github.com/DATA-DOG/go-sqlmock>SQLMock library</a>. You will also be given one of the test function `TestGetByID()` so you can test your `GetByID()` function and use this as a basis to write your other test functions! This README will contain a detailed explanation of what the code is doing. 
   
-In essence, we will be giving our mock database basic information and set up __expectations__ to meet when testing our implementation.
+In essence, we will be giving our mock database basic information and set up __expectations__ to meet when testing our implementation. There are different functions to set up expectations. In this example, you will primarily deal with queries and will see `ExpectQuery().WithArgs()`, `WillReturnRows()` and `WillReturnError()`. __You will need to do some documentation reading__ when implementating insertions, updates, and deletions, but they syntax is similar.
   
 ### Create Header Function and High Level Overview of Function
 First, create the function header, following the proper convention. Because we're testing `GetByID()`, the proper name for the function would be `TestGetByID()`. The parameter is also required. The `testing` library should be imported for you if you're using VS Code and the Go extensions. I'll also include the algorithm in pseudocode so you have a better high level overview of what is happening as tests functions can get pretty lengthy.
