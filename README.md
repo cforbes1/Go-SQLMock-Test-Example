@@ -131,7 +131,7 @@ row := mock.NewRows([]string{
 )
 ```
 
-### Using Your Query of Choiece
+### Using Your Query of Choice
 Your Store functions `GetByID()`, `GetByEmail()`, and `GetByUserName()` should all use the standard `SELECT FROM WHERE` query with the given condition. The given query is what worked for me, and is probably the safest bet.
 
 __NOTE__: Your query for the mock database must match the query you use in your function implementations (I believe mismatches in casing and whitespace is okay). I ran into runtime errors if I used `SELECT id,email,passhash...` in my function but used `SELECT *...` in my test function for the mock database. If you had it the other way around, you might fail a test case.
