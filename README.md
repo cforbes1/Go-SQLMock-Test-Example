@@ -4,7 +4,9 @@ An example/tutorial to write a sample SQLMock test in Golang for the class INFO 
 ## Instructions 
 If you are using a SQL database of some sort, you can any of the following:
 - Copy the code for the provided test function and paste it in your own test file
+
 __-----OR-----__
+
 - You can either clone the repo, or simply just download a zip file and transfer the `store_test.go`
 - RENAME the file based on the dialect of SQL you're using:
   - `mysqlstore_test.go` if you're using MySQL 
