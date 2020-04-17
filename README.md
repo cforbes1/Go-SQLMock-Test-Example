@@ -36,10 +36,13 @@ func TestGetByID(t *testing.T) {
     for all the cases in the slice {
       initialize a mock DB
       create and add an EXPECTED ROW to the mock db
-      set up an EXPECTED QUERY an ensure that it returns the EXPECTED ROW for a successful query
-      test our GetByID() function to see that it returns the correct use 
-      set up an EXPECTED QUERY an ensure that it returns an ERROR for an unsuccessful query
-      test our GetByID() function to see that it returns an error 
+      if the case expects an error {
+        set up an EXPECTED QUERY an ensure that it returns an ERROR for an unsuccessful query
+        test our GetByID() function to see that it returns an error 
+      } else {
+        set up an EXPECTED QUERY an ensure that it returns the EXPECTED ROW for a successful query
+        test our GetByID() function to see that it returns the correct use  
+      }
       make sure we met all expectations of the mock database
     }
   */
