@@ -4,7 +4,7 @@ If you are using a SQL database of some sort, you can any of the following:
 
 __-----OR-----__
 
-- You can either clone the repo, or simply just download a zip file and transfer the `store_test.go`
+- Download the repo as a zip file and transfer the `store_test.go`
 - RENAME the file based on the dialect of SQL you're using:
   - `mysqlstore_test.go` if you're using MySQL 
   - `postgressqlstore_test.go` if you're using PostgresSQL 
